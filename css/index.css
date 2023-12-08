@@ -1,0 +1,131 @@
+body {
+  font-size: 16px;
+}
+
+.heading {
+  position: relative;
+}
+
+.heading::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 4px;
+  background-color: gold;
+  bottom: 0;
+  left: 0;
+}
+
+.gold {
+  color: gold;
+}
+
+.wrap-1 {
+  background-color: rgb(36, 36, 36);
+}
+.wrap-1 .text-content {
+  color: #fff;
+}
+.wrap-1 .logos {
+  white-space: nowrap;
+}
+.wrap-1 .logos .logo-slide {
+  display: inline-block;
+  animation: slide 9s infinite linear;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.bgclr {
+  background-color: rgb(36, 36, 36);
+}
+
+.wrap-2 {
+  background-color: rgb(0, 0, 0);
+}
+.wrap-2 .text-content {
+  color: #fff;
+  background-color: #242424;
+}
+.wrap-2 .heading::after {
+  width: 100%;
+}
+.wrap-2 .flipCard {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  perspective: 1000px;
+}
+.wrap-2 .flipCard img, .wrap-2 .flipCard .flipText {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: all 0.7s linear;
+}
+.wrap-2 .flipCard .flipText {
+  background-color: #242424;
+  border-radius: 12px;
+  color: #fff;
+  border: 2px solid gold;
+  transform: rotateY(180deg);
+}
+.wrap-2 .flipCard:hover .flipText {
+  transform: rotateY(0);
+}
+.wrap-2 .flipCard:hover img {
+  transform: rotateY(-180deg);
+}
+
+.wrap-3 {
+  background-color: #000;
+}
+.wrap-3 .carousel-inner {
+  border-radius: 12px;
+}
+.wrap-3 img {
+  height: 400px;
+  border-radius: 12px;
+}
+.wrap-3 .card {
+  background-color: #242424;
+  color: #fff;
+}
+.wrap-3 .carousel-control-next-icon,
+.wrap-3 .carousel-control-prev-icon {
+  color: gold;
+  width: 3rem;
+  height: 3rem;
+  background: #000;
+  border: 3px solid gold;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap-3 .carousel-control-next,
+.wrap-3 .carousel-control-prev {
+  opacity: 1;
+}
+.wrap-3 .carousel-indicators {
+  bottom: -54px;
+}
+.wrap-3 .carousel-control-prev {
+  left: -98px;
+}
+.wrap-3 .carousel-control-next {
+  right: -100px;
+}
+.wrap-3 .carousel-indicators [data-bs-target] {
+  width: 7px;
+}
+.wrap-3 .carousel-indicators .active {
+  background-color: gold;
+  width: 30px;
+}

@@ -1,0 +1,168 @@
+body {
+    font-size: 16px;
+}
+
+.heading {
+    position: relative;
+}
+
+.heading::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 4px;
+    background-color: gold;
+    bottom: 0;
+    left: 0;
+}
+
+.gold {
+    color: gold;
+}
+
+.wrap-1 {
+    background-color: rgb(36, 36, 36);
+
+    .text-content {
+        color: #fff;
+    }
+
+    .logos {
+        white-space: nowrap;
+
+        // &:hover {
+        //     .logo-slide {
+        //         animation-play-state: paused;
+
+        //     }
+        // }
+
+        .logo-slide {
+            display: inline-block;
+            animation: slide 9s infinite linear;
+
+            @keyframes slide {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-100%);
+                }
+            }
+
+        }
+
+    }
+
+
+}
+
+.bgclr {
+    background-color: rgb(36, 36, 36);
+}
+
+
+
+.wrap-2 {
+    background-color: rgb(0, 0, 0);
+
+    .text-content {
+        color: #fff;
+        background-color: #242424;
+    }
+
+    .heading::after {
+        width: 100%;
+    }
+
+    .flipCard {
+        position: relative;
+        width: 100%; 
+        height: 350px; 
+        perspective: 1000px;    //  for 3D effect
+    
+        img, .flipText {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            transition: all .7s linear;
+        }
+    
+        .flipText {
+            background-color: #242424;
+            border-radius: 12px;
+            color: #fff;
+            border: 2px solid gold;
+            transform: rotateY(180deg);
+        }
+    
+        &:hover {
+            .flipText {
+                transform: rotateY(0);
+            }
+    
+            img {
+                transform: rotateY(-180deg);
+            }
+        }
+    }
+}
+
+
+
+.wrap-3 {
+    background-color: #000;
+    .carousel-inner {
+        border-radius: 12px;
+    }
+
+    img {
+        height: 400px;
+        border-radius: 12px;
+    }
+
+    .card {
+        background-color: #242424;
+        color: #fff;
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        color: gold;
+        width: 3rem;
+        height: 3rem;
+        background: #000;
+        border: 3px solid gold;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        opacity: 1;
+    }
+
+    .carousel-indicators {
+        bottom: -54px;
+    }
+
+    .carousel-control-prev {
+        left: -98px;
+    }
+
+    .carousel-control-next {
+        right: -100px;
+    }
+    .carousel-indicators [data-bs-target] {
+        
+        width: 7px;
+    }
+    .carousel-indicators .active {
+        background-color: gold;
+        width: 30px;
+    }
+}
